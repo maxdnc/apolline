@@ -1,101 +1,59 @@
-import Image from "next/image";
+import Accordion from '@/components/reusable-ui/Accordion';
+import CardImage from '@/components/reusable-ui/CardImage';
+import MainButtonLink from '@/components/reusable-ui/MainButtonLink';
 
-export default function Home() {
+import microPeeling from '../../public/images/home/micropelling.png';
+import faceCare from '../../public/images/home/faceCare.png';
+
+export default function Acceuil() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex gap-4 py-16">
+      <div className="p-8 flex flex-col gap-8 w-full max-w-[1120px] mx-auto">
+        <div className="flex flex-col gap-2">
+          <span className="text-lg ">FAQ</span>
+          <h3 className="text-4xl font-semibold ">
+            Les questions fréquentes de nos clients
+          </h3>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <Accordion
+          id="laser-douleur"
+          label="Est-ce que le laser fait mal ?"
+          content="Notre laser d’épilation définitive est conçu pour offrir une séance sans douleur grâce à sa tête froide. Cette technologie de refroidissement avancée apaise la peau pendant le traitement, minimisant les sensations de chaleur et d’inconfort. Ainsi, vous pouvez profiter des résultats durables de l’épilation au laser tout en bénéficiant d’un maximum de confort."
+        />
+        <Accordion
+          id="laser-ete"
+          label="Puis-je faire le laser l’été ?"
+          content="Oui, il est possible de faire de l’épilation définitive au laser en été, mais il faut prendre certaines précautions pour protéger votre peau. Il est recommandé d’éviter l’exposition au soleil pendant au moins deux semaines avant et après chaque séance. Utilisez toujours une protection solaire élevée (SPF 50) sur les zones traitées et portez des vêtements couvrants pour minimiser l’exposition directe au soleil. En suivant ces précautions, vous pouvez profiter des bienfaits de l’épilation au laser tout en protégeant votre peau des dommages causés par le soleil."
+        />
+
+        <div className="flex flex-col sm:flex-row gap-4 mx-auto justify-center max-w-lg">
+          <MainButtonLink href="/contact" size="lg">
+            Prendre rendez-vous
+          </MainButtonLink>
+          <MainButtonLink href="/services" variant="outline" size="lg">
+            En savoir plus
+          </MainButtonLink>
+        </div>
+
+        <div className="flex flex-col md:flex-row  gap-16 ">
+          <CardImage
+            href="/services/example"
+            title="
+Microneedling"
+            description="En stimulant la cellule, le Microneedling permet d’activer le processus de cicatrisation naturelle et la réduction des rides et ridules."
+            imageUrl={microPeeling}
+            alt="Description of image"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <CardImage
+            href="/services/example"
+            title="
+Radiofréquence visage et cou​"
+            description="Technique esthétique non invasive de rajeunissement de la peau qui donne des résultats très similaires à ceux du lifting chirurgical."
+            imageUrl={faceCare}
+            alt="Description of image"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </div>
     </div>
   );
 }
