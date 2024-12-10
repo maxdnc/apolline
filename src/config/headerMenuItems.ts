@@ -1,4 +1,4 @@
-import { MenuItem } from '../types/navigation';
+import { MenuItem } from '../types/headerMenu';
 
 export const menuItems: MenuItem[] = [
   { title: 'Acceuil', href: '/' },

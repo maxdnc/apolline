@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
-import { MenuItem } from '../../../types/navigation';
+import { MenuItem } from '../../../types/headerMenu';
 
 interface DesktopMenuItemProps {
   item: MenuItem;

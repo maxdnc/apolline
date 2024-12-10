@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
-import { MenuItem } from '../../../types/navigation';
+import { MenuItem } from '../../../types/headerMenu';
 import { submenuVariants } from '../../../config/animationsHeader';
 
 interface MobileMenuItemProps {
