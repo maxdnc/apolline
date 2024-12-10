@@ -6,12 +6,27 @@ export const useNavigation = () => {
   const [activeSubmenu, setActiveSubmenu] = useState<number | null>(null);
   const pathname = usePathname();
 
+  // Handle inert and focus management
   useEffect(() => {
+    const mainContent = document.querySelector('main');
+    const footer = document.querySelector('footer');
+
+    if (isOpen) {
+      // Disable interactions for content outside the menu
+      if (mainContent) mainContent.inert = true;
+      if (footer) footer.inert = true;
+      document.body.style.overflow = 'hidden';
+    }
+
+    // Cleanup function
     return () => {
+      if (mainContent) mainContent.inert = false;
+      if (footer) footer.inert = false;
       document.body.style.overflow = 'unset';
     };
-  }, []);
+  }, [isOpen]);
 
+  // Handle resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768 && isOpen) {
@@ -33,7 +48,6 @@ export const useNavigation = () => {
 
   const toggleMenu = (): void => {
     setIsOpen(!isOpen);
-    document.body.style.overflow = !isOpen ? 'hidden' : 'unset';
   };
 
   const toggleSubmenu = (index: number): void => {
