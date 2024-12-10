@@ -13,13 +13,13 @@ interface MobileMenuItemProps {
   activeSubmenu: number | null;
 }
 
-export const MobileMenuItem: React.FC<MobileMenuItemProps> = ({
+export const MobileMenuItem = ({
   item,
   index,
   isCurrentPath,
   toggleSubmenu,
   activeSubmenu,
-}) => {
+}: MobileMenuItemProps) => {
   if (item.submenu) {
     return (
       <div>

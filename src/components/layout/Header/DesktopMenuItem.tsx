@@ -11,13 +11,13 @@ interface DesktopMenuItemProps {
   activeSubmenu: number | null;
 }
 
-export const DesktopMenuItem: React.FC<DesktopMenuItemProps> = ({
+export const DesktopMenuItem = ({
   item,
   index,
   isCurrentPath,
   toggleSubmenu,
   activeSubmenu,
-}) => {
+}: DesktopMenuItemProps) => {
   if (item.submenu) {
     return (
       <div className="relative inline-block">
