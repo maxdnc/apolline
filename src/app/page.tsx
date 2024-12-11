@@ -4,6 +4,7 @@ import MainButtonLink from '@/components/reusable-ui/MainButtonLink';
 
 import microPeeling from '../../public/images/home/micropelling.png';
 import faceCare from '../../public/images/home/faceCare.png';
+import AccordionGroup from '@/components/reusable-ui/AccordionGroup';
 
 export default function Acceuil() {
   return (
@@ -15,16 +16,7 @@ export default function Acceuil() {
             Les questions fréquentes de nos clients
           </h3>
         </div>
-        <Accordion
-          id="laser-douleur"
-          label="Est-ce que le laser fait mal ?"
-          content="Notre laser d’épilation définitive est conçu pour offrir une séance sans douleur grâce à sa tête froide. Cette technologie de refroidissement avancée apaise la peau pendant le traitement, minimisant les sensations de chaleur et d’inconfort. Ainsi, vous pouvez profiter des résultats durables de l’épilation au laser tout en bénéficiant d’un maximum de confort."
-        />
-        <Accordion
-          id="laser-ete"
-          label="Puis-je faire le laser l’été ?"
-          content="Oui, il est possible de faire de l’épilation définitive au laser en été, mais il faut prendre certaines précautions pour protéger votre peau. Il est recommandé d’éviter l’exposition au soleil pendant au moins deux semaines avant et après chaque séance. Utilisez toujours une protection solaire élevée (SPF 50) sur les zones traitées et portez des vêtements couvrants pour minimiser l’exposition directe au soleil. En suivant ces précautions, vous pouvez profiter des bienfaits de l’épilation au laser tout en protégeant votre peau des dommages causés par le soleil."
-        />
+        <AccordionGroup />
 
         <div className="flex flex-col sm:flex-row gap-4 mx-auto justify-center max-w-lg">
           <MainButtonLink href="/contact" size="lg">
