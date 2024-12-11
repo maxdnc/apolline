@@ -14,13 +14,16 @@ export default {
       },
       animation: {
         'hamburger-top-bar':
-          'hamburgerAnimationTopBar 0.6s cubic-bezier(0.90, 0, 0.10, 1) forwards',
+          'hamburgerAnimationTopBar 0.6s cubic-bezier(0.83, 0, 0.17, 1) forwards',
         'hamburger-bottom-bar':
-          'hamburgerAnimationBottomBar 0.6s cubic-bezier(0.90, 0, 0.10, 1) forwards',
+          'hamburgerAnimationBottomBar 0.6s cubic-bezier(0.83, 0, 0.17, 1) forwards',
         'hamburger-top-bar-close':
-          'hamburgerAnimationTopBarClose 0.6s cubic-bezier(0.90, 0, 0.10, 1) forwards',
+          'hamburgerAnimationTopBarClose 0.6s cubic-bezier(0.83, 0, 0.17, 1) forwards',
         'hamburger-bottom-bar-close':
-          'hamburgerAnimationBottomBarClose 0.6s cubic-bezier(0.90, 0, 0.10, 1) forwards',
+          'hamburgerAnimationBottomBarClose 0.6s cubic-bezier(0.83, 0, 0.17, 1) forwards',
+      },
+      transitionTimingFunction: {
+        quint: 'cubic-bezier(0.83, 0, 0.17, 1)',
       },
       keyframes: {
         hamburgerAnimationTopBar: {
