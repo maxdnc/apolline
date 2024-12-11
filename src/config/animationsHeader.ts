@@ -4,6 +4,7 @@ export const menuVariants = {
     transition: {
       duration: 0.6,
       ease: [0.83, 0, 0.17, 1],
+      delay: 0.3,
     },
   },
   open: {
@@ -19,13 +20,13 @@ export const contentMenuVariants = {
   closed: {
     opacity: 0,
     transition: {
-      opacity: { duration: 0.4, ease: [0.83, 0, 0.17, 1] },
+      opacity: { duration: 0.3, ease: [0.6, 0, 0.4, 1] },
     },
   },
   open: {
     opacity: 1,
     transition: {
-      opacity: { delay: 0.35, duration: 0.6, ease: [0.7, 0, 0.3, 1] },
+      opacity: { delay: 0.4, duration: 0.6, ease: [0.83, 0, 0.17, 1] },
     },
   },
 };
