@@ -62,7 +62,7 @@ const NavigationBar = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed inset-0 bg-white z-40 md:hidden"
+            className="fixed inset-0 bg-slate-200 z-40 md:hidden"
             id="mobile-menu"
             role="dialog"
             aria-modal="true"
@@ -83,6 +83,7 @@ const NavigationBar = () => {
                       isCurrentPath={isCurrentPath}
                       toggleSubmenu={toggleSubmenu}
                       activeSubmenu={activeSubmenu}
+                      toggleMenu={toggleMenu}
                     />
                   </div>
                 ))}
