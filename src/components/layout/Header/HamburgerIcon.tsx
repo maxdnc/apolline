@@ -10,8 +10,8 @@ const HamburgerIcon = ({ isOpen }: HamburgerIconProps) => {
        ${isOpen ? 'animate-hamburger-top-bar' : 'animate-hamburger-top-bar-close'}`}
       />
       <span
-        className={`block w-6 h-0.5 rounded bg-gray-800 transition-all duration-200 ease-[cubic-bezier(0.83, 0, 0.17, 1)]
-        ${isOpen ? 'opacity-0 scale-50' : 'opacity-100 delay-200'}`}
+        className={`block w-6 h-0.5 rounded bg-gray-800 transition-all duration-200 ease-quint
+        ${isOpen ? 'opacity-0 scale-0' : 'opacity-100 delay-100'}`}
       />
       <span
         className={`block w-6 h-0.5 rounded bg-gray-800 transition-all

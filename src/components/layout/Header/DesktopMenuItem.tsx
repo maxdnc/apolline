@@ -35,13 +35,13 @@ export const DesktopMenuItem = ({
           <ChevronDown className="w-4 h-4" />
         </button>
 
-        <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute top-full left-0 pt-2 min-w-full transition-all duration-200">
-          <div className="bg-white rounded-md shadow-lg py-2 whitespace-nowrap">
+        <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100  absolute top-full left-0 pt-2 min-w-full transition-opacity duration-300">
+          <div className="bg-white rounded-md shadow-lg py-2 whitespace-nowrap transform duration-300 translate-y-2 group-hover:translate-y-0 ease-in-out">
             {item.submenu.map((subItem, subIndex) => (
               <Link
                 key={subIndex}
                 href={subItem.href}
-                className={`block px-4 py-2 text-sm font-semibold ${
+                className={`block px-4 py-2 text-sm font-semibold transition  ${
                   isCurrentPath(subItem.href)
                     ? 'text-red-400'
                     : 'text-slate-800 hover:bg-slate-100'

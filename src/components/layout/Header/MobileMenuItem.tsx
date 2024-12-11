@@ -37,7 +37,7 @@ export const MobileMenuItem = ({
         >
           <span className="text-sm font-medium">{item.title}</span>
           <ChevronDown
-            className={`w-4 h-4 transform transition-transform duration-[300ms] delay-100 ease-[cubic-bezier(0.83, 0, 0.17, 1) ${
+            className={`w-4 h-4 transform transition-transform duration-300 delay-100 ease-quint ${
               activeSubmenu === index ? 'rotate-180' : ''
             }`}
           />
