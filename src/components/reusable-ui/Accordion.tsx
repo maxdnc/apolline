@@ -1,109 +1,85 @@
-'use client';
-import { useState, useRef, useEffect } from 'react';
+import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp } from 'lucide-react';
 
 interface AccordionProps {
   label: string;
   content: string | string[];
-  id?: string;
+  isOpen: boolean;
+  onToggle: () => void;
 }
 
-const Accordion = ({ label, content, id = 'accordion' }: AccordionProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  const toggleAccordion = () => {
-    setIsOpen(!isOpen);
-  };
-
+const Accordion = ({ label, content, isOpen, onToggle }: AccordionProps) => {
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      toggleAccordion();
+      onToggle();
     }
   };
-
-  useEffect(() => {
-    if (contentRef.current) {
-      if (isOpen) {
-        contentRef.current.style.maxHeight = `${contentRef.current.scrollHeight}px`;
-      } else {
-        contentRef.current.style.maxHeight = '0px';
-      }
-    }
-  }, [isOpen]);
 
   const renderContent = () => {
     if (Array.isArray(content)) {
       return (
-        <ul
-          className={`text-black text-xs md:text-lg transition-opacity duration-400 ${
-            isOpen ? 'opacity-100' : 'opacity-0'
-          }`}
-          role="region"
-        >
+        <ul className="text-black text-xs md:text-lg" role="region">
           {content.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
       );
     }
-    return (
-      <p
-        className={`text-black text-xs md:text-lg transition-opacity duration-400 ${
-          isOpen ? 'opacity-100' : 'opacity-0'
-        }`}
-      >
-        {content}
-      </p>
-    );
+    return <p className="text-black text-xs md:text-lg">{content}</p>;
   };
 
   return (
-    <div className="w-full border rounded-md">
-      <h3>
-        <button
-          type="button"
-          className="w-full bg-primary flex justify-between gap-2 items-center p-2.5 md:p-6 rounded-lg cursor-pointer"
-          onClick={toggleAccordion}
-          onKeyDown={handleKeyDown}
-          aria-expanded={isOpen}
-          aria-controls={`${id}-content`}
-          id={`${id}-header`}
+    <button
+      type="button"
+      onClick={onToggle}
+      onKeyDown={handleKeyDown}
+      className="w-full text-left border rounded-md cursor-pointer"
+      aria-expanded={isOpen}
+    >
+      <div className="w-full bg-primary flex justify-between gap-2 items-center p-2.5 md:p-6 rounded-lg">
+        <h3 className="text-slate-800 md:text-2xl font-bold">{label}</h3>
+        <motion.span
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.45, ease: [0.83, 0, 0.17, 1] }}
+          aria-hidden="true"
         >
-          <span className="text-slate-800 md:text-2xl text-left font-bold">
-            {label}
-          </span>
-          <span
-            className={`transition-transform duration-300  ease-[cubic-bezier(0.83, 0, 0.17, 1)] ${
-              isOpen ? 'rotate-180' : ''
-            }`}
-            aria-hidden="true"
-          >
-            <ChevronUp className="w-6 h-6 md:w-8 md:h-8" />
-          </span>
-        </button>
-      </h3>
-      <div
-        id={`${id}-content`}
-        role="region"
-        aria-labelledby={`${id}-header`}
-        className={`grid transition-[grid-template-rows] duration-[400ms] ease-[cubic-bezier(0.83, 0, 0.17, 1)] ${
-          isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
-        }`}
-      >
-        <div
-          ref={contentRef}
-          className="overflow-hidden transition-[max-height] duration-[400ms] ease-[cubic-bezier(0.83, 0, 0.17, 1)]"
-        >
-          <div
-            className={`p-5 rounded-b-lg transition-opacity duration-400 ease-in delay-200 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
-          >
-            {renderContent()}
-          </div>
-        </div>
+          <ChevronUp className="w-6 h-6 md:w-8 md:h-8" />
+        </motion.span>
       </div>
-    </div>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            role="region"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{
+              height: 'auto',
+              opacity: 1,
+              transition: {
+                height: { duration: 0.45, ease: [0.83, 0, 0.17, 1] },
+                opacity: {
+                  duration: 0.3,
+                  delay: 0.2,
+                  ease: [0.83, 0, 0.17, 1],
+                },
+              },
+            }}
+            exit={{
+              height: 0,
+              opacity: 0,
+              transition: {
+                height: { duration: 0.45, ease: [0.83, 0, 0.17, 1] },
+                opacity: { duration: 0.3, ease: [0.83, 0, 0.17, 1] },
+              },
+            }}
+            className="overflow-hidden"
+          >
+            <div className="p-5 rounded-b-lg">{renderContent()}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </button>
   );
 };
 
