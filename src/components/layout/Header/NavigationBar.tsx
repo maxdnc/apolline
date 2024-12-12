@@ -31,8 +31,6 @@ const NavigationBar = () => {
                   item={item}
                   index={index}
                   isCurrentPath={isCurrentPath}
-                  toggleSubmenu={toggleSubmenu}
-                  activeSubmenu={activeSubmenu}
                 />
               </div>
             ))}
