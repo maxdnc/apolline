@@ -5,6 +5,7 @@ import Background from '../../../../public/images/home/introSection.jpg';
 import { useScroll, useTransform, motion } from 'motion/react';
 import { useRef } from 'react';
 import MainButtonLink from '@/components/reusable-ui/MainButtonLink';
+import ScrollDown from '@/components/reusable-ui/ScrollDown';
 
 export default function SectionIntro() {
   const container = useRef(null);
@@ -60,6 +61,9 @@ export default function SectionIntro() {
             </div>
           </motion.div>
         </motion.div>
+        <div className="absolute bottom-20 left-1/2 -translate-x-1/2 ">
+          <ScrollDown />
+        </div>
       </motion.div>
     </div>
   );
