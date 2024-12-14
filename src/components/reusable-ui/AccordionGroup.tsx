@@ -32,7 +32,7 @@ const AccordionGroup = () => {
   };
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 py-8">
       {accordionData.map((item, index) => (
         <Accordion
           key={index}
