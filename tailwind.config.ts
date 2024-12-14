@@ -8,11 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        largest: '90rem',
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
       animation: {
+        fadeInOut: 'fadeInOut 2s ease-in-out infinite',
         'hamburger-top-bar':
           'hamburgerAnimationTopBar 0.6s cubic-bezier(0.83, 0, 0.17, 1) forwards',
         'hamburger-bottom-bar':
@@ -45,6 +49,21 @@ export default {
           '0%': { transform: 'translateY(-2px) rotate(-45deg)' },
           '50%': { transform: 'translateY(-2px) rotate(0)' },
           '100%': { transform: 'translateY(4px) rotate(0)' },
+        },
+
+        fadeInOut: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-20px) scale(1)',
+          },
+          '50%': {
+            opacity: '1',
+            transform: 'translateY(0) scale(1)',
+          },
+          '100%': {
+            opacity: '0',
+            transform: 'translateY(20px) scale(1)',
+          },
         },
       },
     },
