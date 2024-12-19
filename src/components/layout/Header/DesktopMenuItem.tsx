@@ -44,9 +44,9 @@ export const DesktopMenuItem = ({
           tabIndex={0}
           onFocus={handleFocus}
           onKeyDown={handleKeyDown}
-          className={`flex items-center space-x-1 font-semibold py-2 cursor-pointer ${
+          className={`flex items-center space-x-1  py-2 cursor-pointer ${
             item.submenu.some((subItem) => isCurrentPath(subItem.href))
-              ? 'text-red-400'
+              ? 'text-slate-900 font-bold'
               : 'text-slate-800 group-hover:text-slate-900'
           }`}
           role="button"
@@ -74,9 +74,9 @@ export const DesktopMenuItem = ({
                 key={subIndex}
                 href={subItem.href}
                 onFocus={handleFocus}
-                className={`block px-4 py-2 text-sm font-semibold transition ${
+                className={`block px-4 py-2 text-sm  transition ${
                   isCurrentPath(subItem.href)
-                    ? 'text-red-400'
+                    ? 'text-slate-900 font-bold'
                     : 'text-slate-800 hover:bg-slate-100'
                 }`}
               >
@@ -92,9 +92,9 @@ export const DesktopMenuItem = ({
   return (
     <Link
       href={item.href || '#'}
-      className={`font-semibold py-2 ${
+      className={` py-2 ${
         item.href && isCurrentPath(item.href)
-          ? 'text-red-400'
+          ? 'text-slate-900 font-bold'
           : 'text-slate-800 hover:text-slate-900'
       }`}
     >

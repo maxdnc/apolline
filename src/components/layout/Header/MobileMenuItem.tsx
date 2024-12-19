@@ -28,9 +28,9 @@ export const MobileMenuItem = ({
       <div>
         <button
           onClick={() => toggleSubmenu(index)}
-          className={`flex items-center justify-between w-full py-2 ${
+          className={`flex items-center justify-between w-full py-2   ${
             item.submenu.some((subItem) => isCurrentPath(subItem.href))
-              ? 'text-red-400'
+              ? 'text-slate-900 font-bold'
               : 'text-slate-800 hover:text-slate-900'
           }`}
           aria-expanded={activeSubmenu === index}
@@ -47,7 +47,7 @@ export const MobileMenuItem = ({
           initial={false}
           animate={isSubmenuOpen ? 'open' : 'closed'}
           variants={submenuVariants}
-          className="pl-4 flex flex-col gap-2 overflow-hidden"
+          className="pl-4 flex flex-col gap-2 overflow-hidden "
         >
           {item.submenu.map((subItem, subIndex) => (
             <Link
@@ -56,7 +56,7 @@ export const MobileMenuItem = ({
               onClick={toggleMenu}
               className={`block py-2 text-sm ${
                 isCurrentPath(subItem.href)
-                  ? 'text-red-400'
+                  ? 'text-slate-900 font-bold'
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
@@ -74,7 +74,7 @@ export const MobileMenuItem = ({
       onClick={toggleMenu}
       className={`block py-2 text-sm ${
         item.href && isCurrentPath(item.href)
-          ? 'text-red-400'
+          ? 'text-slate-900 font-bold'
           : 'text-slate-800 hover:text-slate-900'
       }`}
     >

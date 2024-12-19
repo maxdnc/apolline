@@ -60,12 +60,12 @@ const NavigationBar = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed inset-0 bg-slate-200 z-40 md:hidden"
+            className="fixed inset-0 bg-slate-50 z-40 md:hidden"
             id="mobile-menu"
             role="dialog"
             aria-modal="true"
           >
-            <div className="p-4 pt-20">
+            <div className="p-4 pt-10">
               <motion.div
                 className="mt-6"
                 initial="closed"
