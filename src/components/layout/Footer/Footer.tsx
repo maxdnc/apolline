@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
-import { footerLinks, socialLinks } from '../../../config/footerItems';
+import { footerLinks } from '../../../config/footerItems';
 import LinkSection from './LinkSection';
+import SocialLinks from '@/components/reusable-ui/SocialLinks';
 
 const Footer = () => {
   return (
@@ -31,18 +32,7 @@ const Footer = () => {
             © {new Date().getFullYear()} Votre Entreprise. Tous droits
             réservés.
           </p>
-          <div className="flex gap-4">
-            {socialLinks.map((social) => (
-              <Link
-                key={social.name}
-                href={social.href}
-                className="text-white hover:text-white"
-              >
-                <social.icon className="w-5 h-5" />
-                <span className="sr-only">{social.name}</span>
-              </Link>
-            ))}
-          </div>
+          <SocialLinks />
         </div>
       </div>
     </footer>
