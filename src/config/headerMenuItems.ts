@@ -18,6 +18,6 @@ export const menuItems: MenuItem[] = [
       { title: 'Cryolipolyse à Plaques', href: '/services/support' },
     ],
   },
-  { title: 'À Propos', href: '/about' },
+  { title: 'À Propos', href: '/aPropos' },
   { title: 'Contact', href: '/contact' },
 ];
