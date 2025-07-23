@@ -20,7 +20,7 @@ const ContactInfo = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-8 bg-secondary-50 flex-1 rounded p-8 ">
+    <div className="flex flex-col gap-8 bg-secondary-100 flex-1 rounded p-8 ">
       <div className="flex flex-col justify-between mb-8 ">
         <div className="space-y-7 ">
           {contactDetails.map((detail, index) => (

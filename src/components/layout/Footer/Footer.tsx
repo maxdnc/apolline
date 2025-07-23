@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { footerLinks } from '../../../config/footerItems';
 import LinkSection from './LinkSection';
 import SocialLinks from '@/components/reusable-ui/SocialLinks';
+import Image from 'next/image';
+import logoC from '../../../../public/svg/logoC.svg';
 
 const Footer = () => {
   return (
@@ -11,13 +13,19 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo Section */}
           <div>
-            <Link href="/" className="text-xl font-bold text-secondary-50">
-              Logo
+            <Link href="/" className="flex items-start h-full">
+              <Image
+                src={logoC}
+                alt="maison apoline"
+                priority
+                className="h-full w-auto max-h-14 object-contain"
+              />
             </Link>
-            <p className="mt-4 text-sm text-secondary-50">
+
+            {/* <p className="mt-4 text-sm text-secondary-50">
               Centre d&apos;esthétique spécialisé dans les soins du visage et du
               corps
-            </p>
+            </p> */}
           </div>
 
           {/* Link Sections */}
@@ -29,8 +37,7 @@ const Footer = () => {
         {/* Copyright and Social */}
         <div className="mt-12 pt-8 border-t text-center text-sm text-secondary-50 flex justify-between">
           <p>
-            © {new Date().getFullYear()} Votre Entreprise. Tous droits
-            réservés.
+            © {new Date().getFullYear()} Maison Apolline. Tous droits réservés.
           </p>
           <SocialLinks />
         </div>

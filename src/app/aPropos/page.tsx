@@ -23,12 +23,13 @@ const page = () => {
             </p>
           </div>
 
-          {/* Blob Images Container */}
-          <div className="relative lg:hidden">
+          {/* Mobile: Simple stacked layout */}
+          <div className="lg:hidden">
             <BlobImagesContainer />
           </div>
 
-          <div className="hidden lg:block lg:w-2/3 relative h-[50vh] lg:h-auto">
+          {/* Desktop: Absolute positioned blobs */}
+          <div className="hidden lg:block lg:w-2/3 relative h-[50vh] lg:h-auto min-h-[400px]">
             <BlobImagesContainer />
           </div>
         </div>

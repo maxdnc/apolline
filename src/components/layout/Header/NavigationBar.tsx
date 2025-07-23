@@ -22,12 +22,12 @@ const NavigationBar = () => {
     <nav className="bg-secondary-100 py-4">
       <div className="max-w-largest mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center h-full py-2">
+          <Link href="/" className="flex items-center h-full ">
             <Image
               src={logoSmall}
               alt="maison apoline"
               priority
-              className="h-full w-auto max-h-12 object-contain"
+              className="h-full w-auto max-h-14 object-contain"
             />
           </Link>
 

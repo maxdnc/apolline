@@ -3,19 +3,12 @@ import { MenuItem } from '../types/headerMenu';
 export const menuItems: MenuItem[] = [
   { title: 'Acceuil', href: '/' },
   {
-    title: 'Soins visage',
+    title: 'Soins',
     submenu: [
-      { title: 'Hifu', href: '/products/hifu' },
-      { title: 'Peeling', href: '/products/peeling' },
-      { title: 'Cryovisage', href: '/products/cryovisage' },
-    ],
-  },
-  {
-    title: 'Soins corps',
-    submenu: [
-      { title: 'Épilation laser définitive', href: '/services/consulting' },
-      { title: 'Cryolipolyse à Aspiration', href: '/services/training' },
-      { title: 'Cryolipolyse à Plaques', href: '/services/support' },
+      { title: 'Laser', href: '/products/laser' },
+      { title: 'Cryolipolyse', href: '/products/cryolipolyse' },
+      { title: 'Hydralift', href: '/products/hydralift' },
+      { title: 'HIFU', href: '/products/HIFU' },
     ],
   },
   { title: 'À Propos', href: '/aPropos' },
