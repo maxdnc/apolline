@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ChevronUp } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 interface AccordionProps {
   label: string;
@@ -45,7 +45,7 @@ const Accordion = ({ label, content, isOpen, onToggle }: AccordionProps) => {
           transition={{ duration: 0.45, ease: [0.83, 0, 0.17, 1] }}
           aria-hidden="true"
         >
-          <ChevronUp className="w-6 h-6 md:w-8 md:h-8" />
+          <ChevronDown className="w-6 h-6 md:w-8 md:h-8" />
         </motion.span>
       </div>
       <AnimatePresence initial={false}>
