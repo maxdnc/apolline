@@ -1,10 +1,6 @@
 import { SectionWrapper } from '@/components/reusable-ui/SectionWrapper';
 import TitleSection from '@/components/reusable-ui/TitleSection';
-import AlissonImage from '../../../public/images/about/Ali.jpg';
-import AlissonProfil from '../../../public/images/about/AliProfil.jpg';
-import AliWorking from '../../../public/images/about/AliWorking.png';
-import AliBusinessWoman from '../../../public/images/about/AliBusinessWoman.jpg';
-import BlobShapeImage from '@/components/reusable-ui/BlobShapeImage';
+import { BlobImagesContainer } from './_components/BlobImagesContainer';
 
 const page = () => {
   return (
@@ -28,34 +24,7 @@ const page = () => {
           </div>
 
           {/* Blob Images Container */}
-          <div className="lg:w-2/3 relative h-[50vh] lg:h-auto ">
-            {/* Main center blob */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/3 aspect-square z-30">
-              <BlobShapeImage
-                imgSrc={AliBusinessWoman}
-                shape="blobShapeA"
-                alt="Portrait principal d'Alisson"
-              />
-            </div>
-
-            {/* Top right blob */}
-            <div className="absolute top-0 right-0 w-2/3 aspect-square z-20">
-              <BlobShapeImage
-                imgSrc={AlissonProfil}
-                shape="default"
-                alt="Portrait décoratif d'Alisson"
-              />
-            </div>
-
-            {/* Top left blob */}
-            <div className="absolute top-0 left-0 w-1/2 h-auto aspect-square z-0">
-              <BlobShapeImage
-                imgSrc={AliWorking}
-                shape="blobShapeC"
-                alt="Portrait décoratif d'Alisson"
-              />
-            </div>
-          </div>
+          <BlobImagesContainer />
         </div>
       </SectionWrapper>
 
