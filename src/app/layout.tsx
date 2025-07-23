@@ -4,15 +4,28 @@ import './globals.css';
 import NavigationBar from '@/components/layout/Header/NavigationBar';
 import Footer from '@/components/layout/Footer/Footer';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
+const newYork = localFont({
+  src: './fonts/NewYork.otf',
+  variable: '--font-new-york',
+  display: 'swap',
 });
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
+
+// const axiformaThin = localFont({
+//   src: './fonts/Axiforma-Thin.otf',
+//   variable: '--font-axiforma-thin',
+//   display: 'swap',
+// });
+
+const axiformaLight = localFont({
+  src: './fonts/Axiforma-Light.woff2',
+  variable: '--font-axiforma-thin',
+  display: 'swap',
+});
+
+const axiformaMedium = localFont({
+  src: './fonts/Axiforma-Medium.woff2',
+  variable: '--font-axiforma-normal',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -28,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${newYork.variable} ${axiformaLight.variable} ${axiformaMedium.variable} antialiased`}
       >
         <div className="min-h-[100dvh] grid grid-rows-[auto_1fr_auto] grid-cols-[minmax(0,1fr)]">
           <header>

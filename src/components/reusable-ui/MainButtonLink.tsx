@@ -26,10 +26,11 @@ const MainButtonLink = ({
     'inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2';
 
   const variantStyles = {
-    primary: 'bg-slate-800 text-white hover:bg-slate-700',
-    secondary: 'bg-slate-100 text-slate-900 hover:bg-slate-200',
-    outline: 'border-2  border-slate-800 hover:bg-slate-800 hover:text-white',
-    ghost: 'hover:bg-slate-100 text-slate-900',
+    primary: 'bg-primary-950 text-secondary-50 hover:bg-primary-900',
+    secondary: 'bg-secondary-100 text-primary-950 hover:bg-secondary-200',
+    outline:
+      'border-2  border-primary-950 hover:bg-primary-950 hover:text-secondary-50',
+    ghost: 'hover:bg-secondary-50 text-primary-950',
   };
 
   const sizeStyles = {

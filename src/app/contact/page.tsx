@@ -19,7 +19,7 @@ const page = () => {
       <SectionHoraires />
 
       <SectionWrapper>
-        <h2 className="text-[clamp(1.75rem,1.5vw+1rem,2.25rem)] mb-8 leading-tight text-center relative font-thin text-slate-700">
+        <h2 className="text-[clamp(1.75rem,1.5vw+1rem,2.25rem)] mb-8 leading-tight text-center relative font-thin text-primary-900">
           Contactez-nous
         </h2>
         <p className="text-pretty text-center ">

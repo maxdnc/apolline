@@ -182,10 +182,10 @@ export const BlobShapeC = () => {
 // Container component that holds all three blobs
 export const BlobImagesContainer = () => {
   return (
-    <div className="lg:w-2/3 relative h-[50vh] lg:h-auto">
+    <>
       <BlobShapeA_CSSMask />
       <BlobShapeDefault />
       <BlobShapeC />
-    </div>
+    </>
   );
 };

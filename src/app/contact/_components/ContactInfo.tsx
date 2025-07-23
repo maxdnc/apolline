@@ -1,6 +1,5 @@
 import SocialLinks from '@/components/reusable-ui/SocialLinks';
 import { MapPin, Phone, Mail } from 'lucide-react';
-import { label } from 'motion/react-client';
 
 const ContactInfo = () => {
   const contactDetails = [
@@ -21,15 +20,17 @@ const ContactInfo = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-8 bg-slate-50 flex-1 rounded p-8 ">
+    <div className="flex flex-col gap-8 bg-secondary-50 flex-1 rounded p-8 ">
       <div className="flex flex-col justify-between mb-8 ">
         <div className="space-y-7 ">
           {contactDetails.map((detail, index) => (
             <div key={index} className="flex items-center space-x-4">
-              <div className="text-slate-700 flex-shrink-0 ">{detail.icon}</div>
+              <div className="text-primary-900 flex-shrink-0 ">
+                {detail.icon}
+              </div>
 
               <div className="flex-1">
-                <p className="mt-1 text-slate-800 ">{detail.label} : </p>
+                <p className="mt-1 text-primary-950 ">{detail.label} : </p>
                 <p className="mt-1 text-slate-600 whitespace-pre-line">
                   {detail.value}
                 </p>

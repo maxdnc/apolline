@@ -14,8 +14,8 @@ const SocialLinks = ({ dark = false }: SocialLinksProps) => {
           href={social.href}
           className={`${
             dark
-              ? 'text-slate-700 hover:text-slate-500'
-              : 'text-white hover:text-white'
+              ? 'text-primary-900 hover:text-slate-500'
+              : 'text-secondary-50 hover:text-secondary-50'
           } transition-colors duration-200`}
         >
           <social.icon className="w-5 h-5" />

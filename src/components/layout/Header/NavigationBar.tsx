@@ -11,17 +11,24 @@ import { DesktopMenuItem } from './DesktopMenuItem';
 import { MobileMenuItem } from './MobileMenuItem';
 import MainButtonLink from '../../reusable-ui/MainButtonLink';
 import HamburgerIcon from './HamburgerIcon';
+import Image from 'next/image';
+import logoSmall from '../../../../public/svg/logoSmall.svg';
 
 const NavigationBar = () => {
   const { isOpen, activeSubmenu, isCurrentPath, toggleMenu, toggleSubmenu } =
     useNavigation();
 
   return (
-    <nav className="bg-white shadow">
+    <nav className="bg-secondary-100 py-4">
       <div className="max-w-largest mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="text-xl font-bold">
-            Logo
+          <Link href="/" className="flex items-center h-full py-2">
+            <Image
+              src={logoSmall}
+              alt="maison apoline"
+              priority
+              className="h-full w-auto max-h-12 object-contain"
+            />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
@@ -41,7 +48,7 @@ const NavigationBar = () => {
 
           <button
             onClick={toggleMenu}
-            className="md:hidden p-4 rounded-md text-slate-800 hover:text-slate-900 relative z-50"
+            className="md:hidden p-4 rounded-md text-primary-950 hover:text-primary-950 relative z-50"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
           >
@@ -60,7 +67,7 @@ const NavigationBar = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="fixed inset-0 bg-slate-50 z-40 md:hidden"
+            className="fixed inset-0 bg-secondary-50 z-40 md:hidden"
             id="mobile-menu"
             role="dialog"
             aria-modal="true"

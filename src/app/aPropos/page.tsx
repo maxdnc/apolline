@@ -24,11 +24,17 @@ const page = () => {
           </div>
 
           {/* Blob Images Container */}
-          <BlobImagesContainer />
+          <div className="relative lg:hidden">
+            <BlobImagesContainer />
+          </div>
+
+          <div className="hidden lg:block lg:w-2/3 relative h-[50vh] lg:h-auto">
+            <BlobImagesContainer />
+          </div>
         </div>
       </SectionWrapper>
 
-      <SectionWrapper background="bg-slate-50">
+      <SectionWrapper background="bg-secondary-100">
         <TitleSection>Nos engagements</TitleSection>
         <div className="flex flex-col gap-8 w-full p-4">
           <p className="text-pretty">

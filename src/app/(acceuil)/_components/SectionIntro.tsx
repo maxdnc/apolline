@@ -6,6 +6,7 @@ import { useScroll, useTransform, motion } from 'motion/react';
 import { useRef } from 'react';
 import MainButtonLink from '@/components/reusable-ui/MainButtonLink';
 import ScrollDown from '@/components/reusable-ui/ScrollDown';
+import LogoBig from '../../../../public/svg/logoBig.svg';
 
 export default function SectionIntro() {
   const container = useRef(null);
@@ -43,14 +44,12 @@ export default function SectionIntro() {
         >
           <motion.div
             style={{ opacity: opacityText }}
-            className="max-w-4xl text-center space-y-6"
+            className="max-w-4xl text-center px-4"
           >
-            <h1 className="text-4xl md:text-[6vw] font-light tracking-wider text-white leading-none text-pretty ">
-              Révelez votre beauté sans chirugie
-            </h1>
-            <h2 className="text-white/90 text-sm md:text-lg">
+            <Image src={LogoBig} alt="image" className="mb-14 md:mb-24" />
+            {/* <h2 className="text-secondary-100/90 text-sm md:text-lg">
               Cabinet de soins esthétiques à Boulogne-Sur-Mer
-            </h2>
+            </h2> */}
             <div className="flex flex-col mx-auto max-w-sm sm:max-w-none sm:flex-row gap-4 justify-center pt-8">
               <MainButtonLink href="/" size="lg" variant="secondary">
                 Rendez-vous en ligne

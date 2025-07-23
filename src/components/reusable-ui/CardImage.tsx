@@ -21,17 +21,17 @@ const CardImage = ({ href, title, description, imageUrl, alt }: CardProps) => {
         alt={alt}
         fill
         placeholder="blur"
-        className="object-cover duration-300 group-hover:scale-105 transition-all  group-hover:blur "
+        className="object-cover blur-[2px] duration-300 group-hover:scale-105 transition-all  group-hover:blur "
       />
 
-      <div className="absolute  inset-0 bg-gradient-to-t from-black/100 to-black/30 " />
+      <div className="absolute  inset-0 bg-gradient-to-t from-black/100 to-black/30" />
 
-      <div className="absolute h-full p-12 text-white flex flex-col justify-between text-pretty">
+      <div className="absolute h-full p-12 text-secondary-100 group-hover:text-secondary-50 flex flex-col justify-between text-pretty">
         <div className="flex flex-col gap-4">
           <h3 className="text-3xl font-bold mb-2">{title}</h3>
           <p className="mb-4 opacity-90">{description}</p>
         </div>
-        <span className="inline-flex items-center text-lg font-bold text-white  transition-colors ">
+        <span className="inline-flex items-center text-lg font-bold text-secondary-100 group-hover:text-secondary-50  transition-colors ">
           En savoir plus
           <ChevronRight className="ml-2 w-6 h-6 group-hover:translate-x-2 transition-transform" />
         </span>

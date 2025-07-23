@@ -30,8 +30,8 @@ export const MobileMenuItem = ({
           onClick={() => toggleSubmenu(index)}
           className={`flex items-center justify-between w-full py-2   ${
             item.submenu.some((subItem) => isCurrentPath(subItem.href))
-              ? 'text-slate-900 font-bold'
-              : 'text-slate-800 hover:text-slate-900'
+              ? 'text-primary-950 font-bold'
+              : 'text-primary-950 hover:text-primary-950'
           }`}
           aria-expanded={activeSubmenu === index}
         >
@@ -56,8 +56,8 @@ export const MobileMenuItem = ({
               onClick={toggleMenu}
               className={`block py-2 text-sm ${
                 isCurrentPath(subItem.href)
-                  ? 'text-slate-900 font-bold'
-                  : 'text-slate-600 hover:text-slate-900'
+                  ? 'text-primary-950 font-bold'
+                  : 'text-slate-600 hover:text-primary-950'
               }`}
             >
               {subItem.title}
@@ -74,8 +74,8 @@ export const MobileMenuItem = ({
       onClick={toggleMenu}
       className={`block py-2 text-sm ${
         item.href && isCurrentPath(item.href)
-          ? 'text-slate-900 font-bold'
-          : 'text-slate-800 hover:text-slate-900'
+          ? 'text-primary-950 font-bold'
+          : 'text-primary-950 hover:text-primary-950'
       }`}
     >
       {item.title}

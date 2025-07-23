@@ -46,8 +46,8 @@ export const DesktopMenuItem = ({
           onKeyDown={handleKeyDown}
           className={`flex items-center space-x-1  py-2 cursor-pointer ${
             item.submenu.some((subItem) => isCurrentPath(subItem.href))
-              ? 'text-slate-900 font-bold'
-              : 'text-slate-800 group-hover:text-slate-900'
+              ? 'text-primary-950 font-bold'
+              : 'text-primary-950 group-hover:text-primary-950'
           }`}
           role="button"
           aria-expanded={isFocused}
@@ -76,8 +76,8 @@ export const DesktopMenuItem = ({
                 onFocus={handleFocus}
                 className={`block px-4 py-2 text-sm  transition ${
                   isCurrentPath(subItem.href)
-                    ? 'text-slate-900 font-bold'
-                    : 'text-slate-800 hover:bg-slate-100'
+                    ? 'text-primary-950 font-bold'
+                    : 'text-primary-950 hover:bg-secondary-100'
                 }`}
               >
                 {subItem.title}
@@ -94,8 +94,8 @@ export const DesktopMenuItem = ({
       href={item.href || '#'}
       className={` py-2 ${
         item.href && isCurrentPath(item.href)
-          ? 'text-slate-900 font-bold'
-          : 'text-slate-800 hover:text-slate-900'
+          ? 'text-primary-950 font-bold'
+          : 'text-primary-950 hover:text-primary-950'
       }`}
     >
       {item.title}
