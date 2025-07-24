@@ -29,6 +29,8 @@ export default function SectionIntro() {
           fill
           alt="image"
           style={{ objectFit: 'cover' }}
+          placeholder="blur"
+          priority
         />
         {/* Overlay */}
         <motion.div

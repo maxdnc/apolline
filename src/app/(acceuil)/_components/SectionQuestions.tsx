@@ -13,7 +13,7 @@ const SectionQuestions = () => {
         <MainButtonLink href="/contact" size="lg">
           Posez-nous vos questions
         </MainButtonLink>
-        <MainButtonLink href="/services" variant="outline" size="lg">
+        <MainButtonLink href="/services" variant="secondary" size="lg">
           Contactez nous
         </MainButtonLink>
       </div>

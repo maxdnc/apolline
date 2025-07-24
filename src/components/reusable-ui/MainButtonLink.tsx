@@ -27,9 +27,10 @@ const MainButtonLink = ({
 
   const variantStyles = {
     primary: 'bg-primary-950 text-secondary-50 hover:bg-primary-900',
-    secondary: 'bg-secondary-100 text-primary-950 hover:bg-secondary-200',
+    secondary:
+      'bg-secondary-50 border border-primary-950 text-primary-950 hover:bg-secondary-100',
     outline:
-      'border-2  border-primary-950 hover:bg-primary-950 hover:text-secondary-50',
+      'border  border-primary-950 hover:bg-primary-950 hover:text-secondary-50',
     ghost: 'hover:bg-secondary-50 text-primary-950',
   };
 
