@@ -8,24 +8,31 @@ const SectionServices = () => {
   return (
     <SectionWrapper background="bg-secondary-100">
       <TitleSection>Nos Services</TitleSection>
-      <div className="flex flex-col md:flex-row  gap-16 mb-12 ">
+      <div className="flex flex-col md:flex-row gap-8 mb-12 ">
         <CardImage
           href="/services/example"
-          title="Microneedling"
+          title="Laser"
           description="En stimulant la cellule, le Microneedling permet d’activer le processus de cicatrisation naturelle et la réduction des rides et ridules."
           imageUrl={microPeeling}
           alt="Description of image"
         />
         <CardImage
           href="/services/example"
-          title="Radiofréquence visage et cou"
+          title="Cryolipolyse"
           description="Technique esthétique non invasive de rajeunissement de la peau qui donne des résultats très similaires à ceux du lifting chirurgical."
           imageUrl={faceCare}
           alt="Description of image"
         />
         <CardImage
           href="/services/example"
-          title="Radiofréquence visage et cou"
+          title="Hydralift"
+          description="Technique esthétique non invasive de rajeunissement de la peau qui donne des résultats très similaires à ceux du lifting chirurgical."
+          imageUrl={faceCare}
+          alt="Description of image"
+        />
+        <CardImage
+          href="/services/example"
+          title="HIFU"
           description="Technique esthétique non invasive de rajeunissement de la peau qui donne des résultats très similaires à ceux du lifting chirurgical."
           imageUrl={faceCare}
           alt="Description of image"
