@@ -39,7 +39,7 @@ const Accordion = ({ label, content, isOpen, onToggle }: AccordionProps) => {
       aria-expanded={isOpen}
     >
       <div className="w-full bg-primary flex justify-between gap-2 items-center p-3 md:p-6 rounded-lg">
-        <h3 className="text-primary-950 md:text-2xl font-bold">{label}</h3>
+        <h3 className="text-primary-950 md:text-xl font-bold">{label}</h3>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.45, ease: [0.83, 0, 0.17, 1] }}
