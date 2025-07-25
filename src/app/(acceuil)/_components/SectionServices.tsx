@@ -36,7 +36,7 @@ const SectionServices = () => {
         />
 
         <CardImage
-          href="/services/hifu"
+          href="/services/HIFU"
           title="HIFU"
           description="Un lifting sans chirurgie pour raffermir, lisser et rajeunir votre visage."
           imageUrl={HIFU}
