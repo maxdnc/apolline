@@ -19,11 +19,17 @@ const AccordionGroup = () => {
     {
       label: "Puis-je faire le laser l'été ?",
       content:
-        "Oui, il est possible de faire de l'épilation définitive au laser en été, mais il faut prendre certaines précautions pour protéger votre peau. Il est recommandé d'éviter l'exposition au soleil pendant au moins deux semaines avant et après chaque séance. Utilisez toujours une protection solaire élevée (SPF 50) sur les zones traitées et portez des vêtements couvrants pour minimiser l'exposition directe au soleil. En suivant ces précautions, vous pouvez profiter des bienfaits de l'épilation au laser tout en protégeant votre peau des dommages causés par le soleil.",
+        "Oui, il est possible de faire de l'épilation définitive au laser en été, mais il faut prendre certaines précautions pour protéger votre peau. Il est recommandé d'éviter l'exposition au soleil pendant au moins deux semaines avant et après chaque séance. Utilisez toujours une protection solaire élevée (SPF 50) sur les zones traitées et portez des vêtements couvrants pour minimiser l'exposition directe au soleil.",
     },
     {
-      label: "Puis-je faire le laser l'été ?",
-      content: ['oui', 'baguette', 'oui oui'],
+      label: "Combien de séances sont nécessaires pour l'épilation laser ?",
+      content:
+        'Le nombre de séances varie selon la zone traitée, votre type de peau et la couleur de vos poils. En général, il faut compter entre 6 à 10 séances pour obtenir des résultats optimaux. Les séances sont espacées de 4 à 8 semaines selon la zone. Lors de votre bilan gratuit, nos spécialistes évalueront vos besoins spécifiques et vous proposeront un protocole personnalisé.',
+    },
+    {
+      label: 'Quels sont les résultats attendus avec la cryolipolyse ?',
+      content:
+        'La cryolipolyse permet de réduire les amas graisseux localisés de 20 à 25% par séance. Les premiers résultats sont visibles après 3 semaines, avec des résultats optimaux après 2 à 3 mois. Cette technique non-invasive cible spécifiquement les cellules graisseuses par le froid, sans affecter les tissus environnants. Idéale pour affiner la silhouette au niveau du ventre, des hanches, des cuisses ou du double menton.',
     },
   ];
 

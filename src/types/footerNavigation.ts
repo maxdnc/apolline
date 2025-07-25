@@ -4,7 +4,6 @@ export interface FooterLink {
 }
 
 export interface FooterLinks {
-  soinsVisage: FooterLink[];
-  soinsCorps: FooterLink[];
+  nosServices: FooterLink[];
   navigation: FooterLink[];
 }

@@ -2,16 +2,13 @@ import { FooterLinks } from '../types/footerNavigation';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 
 export const footerLinks: FooterLinks = {
-  soinsVisage: [
-    { title: 'Hifu', href: '/products/hifu' },
-    { title: 'Peeling', href: '/products/peeling' },
-    { title: 'Cryovisage', href: '/products/cryovisage' },
+  nosServices: [
+    { title: 'Laser', href: '/services/Laser' },
+    { title: 'Cryolipolyse', href: '/services/cryolipolyse' },
+    { title: 'Hydralift', href: '/services/hydralift' },
+    { title: 'Cryovisage', href: '/services/hifu' },
   ],
-  soinsCorps: [
-    { title: 'Épilation laser définitive', href: '/services/consulting' },
-    { title: 'Cryolipolyse à Aspiration', href: '/services/training' },
-    { title: 'Cryolipolyse à Plaques', href: '/services/support' },
-  ],
+
   navigation: [
     { title: 'Accueil', href: '/' },
     { title: 'À Propos', href: '/about' },

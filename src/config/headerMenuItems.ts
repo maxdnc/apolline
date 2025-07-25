@@ -3,12 +3,12 @@ import { MenuItem } from '../types/headerMenu';
 export const menuItems: MenuItem[] = [
   { title: 'Acceuil', href: '/' },
   {
-    title: 'Soins',
+    title: 'Nos Services',
     submenu: [
-      { title: 'Laser', href: '/products/laser' },
-      { title: 'Cryolipolyse', href: '/products/cryolipolyse' },
-      { title: 'Hydralift', href: '/products/hydralift' },
-      { title: 'HIFU', href: '/products/HIFU' },
+      { title: 'Laser', href: '/services/laser' },
+      { title: 'Cryolipolyse', href: '/services/cryolipolyse' },
+      { title: 'Hydralift', href: '/services/hydralift' },
+      { title: 'HIFU', href: '/services/HIFU' },
     ],
   },
   { title: 'À Propos', href: '/aPropos' },

@@ -10,7 +10,7 @@ const SectionServices = () => {
   return (
     <SectionWrapper>
       <TitleSection>Nos Services</TitleSection>
-      <div className="flex flex-col md:flex-row gap-8 mb-12 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pt-4">
         <CardImage
           href="/services/laser"
           title="Laser"
