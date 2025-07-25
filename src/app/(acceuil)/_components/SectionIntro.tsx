@@ -42,7 +42,7 @@ export default function SectionIntro() {
         {/* Text content with parallax */}
         <motion.div
           style={{ y: textY }}
-          className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4"
+          className="absolute inset-0 z-20 flex flex-col items-center justify-center px-[40px] lg:px-[70px]"
         >
           <motion.div
             style={{ opacity: opacityText }}

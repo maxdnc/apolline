@@ -23,7 +23,7 @@ const MainButtonLink = ({
   children,
 }: ButtonProps) => {
   const baseStyles =
-    'inline-flex items-center justify-center rounded-md text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2';
+    'inline-flex items-center justify-center rounded-sm text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2';
 
   const variantStyles = {
     primary: 'bg-primary-950 text-secondary-50 hover:bg-primary-900',
@@ -35,9 +35,9 @@ const MainButtonLink = ({
   };
 
   const sizeStyles = {
-    sm: 'h-7 px-2 text-xs sm:h-8 sm:px-3 md:h-9 md:px-4',
-    md: 'h-8 px-3 text-sm sm:h-10 sm:px-4 md:h-11 md:px-5',
-    lg: 'h-10 px-4 text-base sm:h-12 sm:px-6 md:h-14 md:px-8 md:text-lg',
+    sm: 'h-12 px-3 text-sm sm:h-10 sm:px-4 md:h-11 md:px-5',
+    md: 'h-12 px-3 text-sm sm:h-10 sm:px-4 md:h-11 md:px-5',
+    lg: 'h-12 px-4 text-base sm:h-12 sm:px-6 md:h-14 md:px-8 md:text-lg',
   };
 
   return (

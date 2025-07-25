@@ -46,7 +46,7 @@ export const BlobShapeA_Mobile = () => {
 // Desktop version with absolute positioning (using original CSS mask)
 export const BlobShapeA_Desktop = () => {
   return (
-    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/3 aspect-square z-30">
+    <div className="absolute top-24 right-12  -translate-x-1/2 -translate-y-1/2 w-5/12 aspect-square z-30">
       <div
         className="w-full h-full relative"
         style={{
@@ -121,7 +121,7 @@ export const BlobShapeB_Mobile = () => {
 // Desktop version of secondary blob
 export const BlobShapeB_Desktop = () => {
   return (
-    <div className="absolute top-0 right-0 w-2/3 aspect-square z-20">
+    <div className="absolute top-32 right-0 w-2/3 aspect-square z-20">
       <div
         className="w-full h-full relative"
         style={{
@@ -195,7 +195,7 @@ export const BlobShapeC_Mobile = () => {
 // Desktop version of third blob
 export const BlobShapeC_Desktop = () => {
   return (
-    <div className="absolute top-0 left-0 w-1/2 h-auto aspect-square z-0">
+    <div className="absolute top-20 left-0 w-1/2 h-auto aspect-square z-0">
       <div
         className="w-full h-full relative"
         style={{

@@ -12,6 +12,7 @@ import { MobileMenuItem } from './MobileMenuItem';
 import MainButtonLink from '../../reusable-ui/MainButtonLink';
 import HamburgerIcon from './HamburgerIcon';
 import Image from 'next/image';
+import logoB from '../../../../public/svg/logoB.svg';
 import logoSmall from '../../../../public/svg/logoSmall.svg';
 
 const NavigationBar = () => {
@@ -20,14 +21,23 @@ const NavigationBar = () => {
 
   return (
     <nav className="bg-secondary-100 py-4">
-      <div className="max-w-largest mx-auto px-4">
+      <div className="max-w-largest mx-auto px-[40px] lg:px-[70px]">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="flex items-center h-full ">
+          <Link href="/" className="flex items-center h-full">
+            {/* Mobile logo */}
             <Image
               src={logoSmall}
-              alt="maison apoline"
+              alt="Maison Apoline small logo"
               priority
-              className="h-full w-auto max-h-14 object-contain"
+              className="h-full w-auto max-h-14 object-contain block md:hidden"
+            />
+
+            {/* Desktop logo */}
+            <Image
+              src={logoB}
+              alt="Maison Apoline large logo"
+              priority
+              className="h-auto w-auto max-h-12 object-contain hidden md:block"
             />
           </Link>
 
@@ -41,14 +51,11 @@ const NavigationBar = () => {
                 />
               </div>
             ))}
-            <MainButtonLink href="/" variant="primary">
-              Rendez-vous & Tarif
-            </MainButtonLink>
           </div>
 
           <button
             onClick={toggleMenu}
-            className="md:hidden p-4 rounded-md text-primary-950 hover:text-primary-950 relative z-50"
+            className="md:hidden p-4 rounded-sm text-primary-950 hover:text-primary-950 relative z-50"
             aria-controls="mobile-menu"
             aria-expanded={isOpen}
           >
@@ -72,7 +79,7 @@ const NavigationBar = () => {
             role="dialog"
             aria-modal="true"
           >
-            <div className="p-4 pt-10">
+            <div className="p-4 pt-20">
               <motion.div
                 className="mt-6"
                 initial="closed"
@@ -81,7 +88,10 @@ const NavigationBar = () => {
                 variants={contentMenuVariants}
               >
                 {menuItems.map((item, index) => (
-                  <div key={index} className="py-4 border-t border-slate-200">
+                  <div
+                    key={index}
+                    className="py-4 border-t border-secondary-200"
+                  >
                     <MobileMenuItem
                       item={item}
                       index={index}

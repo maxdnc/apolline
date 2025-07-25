@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright and Social */}
-        <div className="mt-12 pt-8 border-t text-center text-sm text-secondary-50 flex justify-between">
+        <div className="mt-12 pt-8 border-t text-sm text-secondary-50 flex justify-between">
           <p>
             © {new Date().getFullYear()} Maison Apolline. Tous droits réservés.
           </p>

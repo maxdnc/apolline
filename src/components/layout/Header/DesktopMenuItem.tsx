@@ -65,7 +65,7 @@ export const DesktopMenuItem = ({
           } group-hover:visible group-hover:opacity-100 group-hover:pointer-events-auto`}
         >
           <div
-            className={`bg-white rounded-md shadow-lg py-2 whitespace-nowrap transform transition-transform duration-300 ${
+            className={`bg-white rounded-sm shadow-lg py-2 whitespace-nowrap transform transition-transform duration-300 ${
               isFocused ? 'translate-y-0' : 'translate-y-2'
             } group-hover:translate-y-0`}
           >
