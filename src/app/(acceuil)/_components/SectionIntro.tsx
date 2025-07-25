@@ -22,7 +22,10 @@ export default function SectionIntro() {
   const opacityText = useTransform(scrollYProgress, [0, 0.4, 0.8], [1, 1, 0]);
 
   return (
-    <div ref={container} className="h-screen w-full overflow-hidden">
+    <div
+      ref={container}
+      className="h-[calc(100dvh-96px)] w-full overflow-hidden"
+    >
       <motion.div style={{ y }} className="relative h-full">
         <Image
           src={Background}
@@ -42,11 +45,11 @@ export default function SectionIntro() {
         {/* Text content with parallax */}
         <motion.div
           style={{ y: textY }}
-          className="absolute inset-0 z-20 flex flex-col items-center justify-center px-[40px] lg:px-[70px]"
+          className="absolute inset-0 z-20 flex flex-col items-center justify-evenly px-[40px] lg:px-[70px]"
         >
           <motion.div
             style={{ opacity: opacityText }}
-            className="max-w-4xl text-center px-4"
+            className="max-w-4xl text-center"
           >
             <Image src={LogoBig} alt="image" className="mb-14 md:mb-24" />
             {/* <h2 className="text-secondary-100/90 text-sm md:text-lg">

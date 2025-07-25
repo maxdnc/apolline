@@ -14,14 +14,14 @@ const CardImage = ({ href, title, description, imageUrl, alt }: CardProps) => {
   return (
     <Link
       href={href}
-      className="group relative block aspect-[3/4] overflow-hidden rounded-lg w-full max-h-96"
+      className="group relative block aspect-[3/4] overflow-hidden rounded-sm w-full max-h-96"
     >
       <Image
         src={imageUrl}
         alt={alt}
         fill
         placeholder="blur"
-        className="object-cover blur-[2px] duration-300 group-hover:scale-105 transition-all  group-hover:blur "
+        className="object-cover blur-[1px] duration-300 group-hover:scale-105 transition-all  group-hover:blur "
       />
 
       <div className="absolute  inset-0 bg-gradient-to-t from-black/100 to-black/30" />

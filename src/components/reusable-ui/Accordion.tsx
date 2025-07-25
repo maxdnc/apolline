@@ -35,11 +35,13 @@ const Accordion = ({ label, content, isOpen, onToggle }: AccordionProps) => {
       type="button"
       onClick={onToggle}
       onKeyDown={handleKeyDown}
-      className="w-full text-left border border-secondary-300 rounded-sm cursor-pointer"
+      className="w-full bg-secondary-50 text-left border border-secondary-300 rounded-sm cursor-pointer"
       aria-expanded={isOpen}
     >
-      <div className="w-full bg-primary flex justify-between gap-2 items-center p-3 md:p-6 rounded-sm">
-        <h3 className="text-primary-950 md:text-xl font-bold">{label}</h3>
+      <div className="w-full bg-primary flex justify-between gap-2 items-center p-5 md:p-6 rounded-sm">
+        <h3 className="text-primary-950 md:text-xl font-bold text-pretty">
+          {label}
+        </h3>
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.45, ease: [0.83, 0, 0.17, 1] }}

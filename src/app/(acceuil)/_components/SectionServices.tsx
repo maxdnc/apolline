@@ -2,40 +2,45 @@ import CardImage from '@/components/reusable-ui/CardImage';
 import { SectionWrapper } from '@/components/reusable-ui/SectionWrapper';
 import TitleSection from '@/components/reusable-ui/TitleSection';
 import microPeeling from '../../../../public/images/home/micropelling.png';
-import faceCare from '../../../../public/images/home/faceCare.png';
+import HIFU from '../../../../public/images/home/hifu.jpg';
+import HYDRALIFT from '../../../../public/images/home/hydralift.png';
+import CRYOLIFT from '../../../../public/images/home/cryolift.png';
 
 const SectionServices = () => {
   return (
-    <SectionWrapper background="bg-secondary-100">
+    <SectionWrapper>
       <TitleSection>Nos Services</TitleSection>
       <div className="flex flex-col md:flex-row gap-8 mb-12 ">
         <CardImage
-          href="/services/example"
+          href="/services/laser"
           title="Laser"
-          description="En stimulant la cellule, le Microneedling permet d’activer le processus de cicatrisation naturelle et la réduction des rides et ridules."
+          description="Éliminez durablement les poils et révélez une peau lisse grâce à la technologie laser 4D."
           imageUrl={microPeeling}
-          alt="Description of image"
+          alt="Épilation laser définitive"
         />
+
         <CardImage
-          href="/services/example"
+          href="/services/cryolipolyse"
           title="Cryolipolyse"
-          description="Technique esthétique non invasive de rajeunissement de la peau qui donne des résultats très similaires à ceux du lifting chirurgical."
-          imageUrl={faceCare}
-          alt="Description of image"
+          description="Affinez votre silhouette sans chirurgie grâce à l’action du froid sur les graisses."
+          imageUrl={CRYOLIFT}
+          alt="Cryolipolyse ventre et hanches"
         />
+
         <CardImage
-          href="/services/example"
+          href="/services/hydralift"
           title="Hydralift"
-          description="Technique esthétique non invasive de rajeunissement de la peau qui donne des résultats très similaires à ceux du lifting chirurgical."
-          imageUrl={faceCare}
-          alt="Description of image"
+          description="Un soin complet pour hydrater, exfolier et redonner éclat et fermeté à votre peau."
+          imageUrl={HYDRALIFT}
+          alt="Hydratation et éclat du visage"
         />
+
         <CardImage
-          href="/services/example"
+          href="/services/hifu"
           title="HIFU"
-          description="Technique esthétique non invasive de rajeunissement de la peau qui donne des résultats très similaires à ceux du lifting chirurgical."
-          imageUrl={faceCare}
-          alt="Description of image"
+          description="Un lifting sans chirurgie pour raffermir, lisser et rajeunir votre visage."
+          imageUrl={HIFU}
+          alt="Lifting non invasif visage"
         />
       </div>
     </SectionWrapper>

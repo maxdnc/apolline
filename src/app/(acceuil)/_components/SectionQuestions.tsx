@@ -5,7 +5,7 @@ import TitleSection from '@/components/reusable-ui/TitleSection';
 
 const SectionQuestions = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper background="bg-secondary-100">
       <TitleSection>Les questions fréquentes de nos clients</TitleSection>
       <AccordionGroup />
 

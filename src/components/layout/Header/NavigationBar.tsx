@@ -20,8 +20,8 @@ const NavigationBar = () => {
     useNavigation();
 
   return (
-    <nav className="bg-secondary-100 py-4">
-      <div className="max-w-largest mx-auto px-[40px] lg:px-[70px]">
+    <nav className="bg-secondary-100 py-4 px-[40px] lg:px-[70px]">
+      <div className="max-w-largest mx-auto ">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center h-full">
             {/* Mobile logo */}
@@ -29,7 +29,7 @@ const NavigationBar = () => {
               src={logoSmall}
               alt="Maison Apoline small logo"
               priority
-              className="h-full w-auto max-h-14 object-contain block md:hidden"
+              className="h-full w-auto max-h-14 object-contain block lg:hidden"
             />
 
             {/* Desktop logo */}
@@ -37,7 +37,7 @@ const NavigationBar = () => {
               src={logoB}
               alt="Maison Apoline large logo"
               priority
-              className="h-auto w-auto max-h-12 object-contain hidden md:block"
+              className="h-auto w-auto max-h-12 object-contain hidden lg:block"
             />
           </Link>
 
